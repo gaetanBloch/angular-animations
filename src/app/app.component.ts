@@ -11,4 +11,8 @@ export class AppComponent {
   onAdd(item) {
     this.list.push(item);
   }
+
+  onDelete(item) {
+    this.list.splice(this.list.indexOf(item), 1);
+  }
 }
