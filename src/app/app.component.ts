@@ -22,11 +22,15 @@ export class AppComponent {
   state = 'normal';
   list = ['Milk', 'Sugar', 'Bread'];
 
-  onAdd(item) {
+  onAdd(item): void {
     this.list.push(item);
   }
 
-  onDelete(item) {
+  onDelete(item): void {
     this.list.splice(this.list.indexOf(item), 1);
+  }
+
+  onAnimate(): void {
+    this.state = this.state === 'normal' ? 'highlighted' : 'normal';
   }
 }
