@@ -6,4 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  list = ['Milk', 'Sugar', 'Bread'];
+
+  onAdd(item) {
+    this.list.push(item);
+  }
 }
